@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Create Post</title>
+</head>
+<body>
+    <h2>Create a New Blog Post</h2>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.title.label }} {{ form.title() }}<br>
+        {{ form.content.label }} {{ form.content() }}<br>
+        {{ form.submit() }}
+    </form>
+    {% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+    {% endfor %}
+</body>
+</html>
+
